@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block content %}
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="booking.css">
+    </head>
+
+       <section id="home" class="d-flex align-items-center position-relative vh-100 cover hero" style="background-image:url(https://q-xx.bstatic.com/images/hotel/max1024x768/473/47344318.jpg);">
+        <div class="container-fluid container-fluid-max">
+          <div class="row">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            </div>
+          </div>
+        </div>
+      </section><br><br><br>
+      <h1 style="display: flex; justify-content: center;">Our Rooms</h1>
+
+     
+
+<section id="featured-destinations" class="featured-destinations bg-lightblue">
+    <div class="row no-gutters">
+      <div class="col-12 col-md-6 d-flex align-items-center order-1 order-md-0">
+        <div class="p-15">
+          <h3>Standard</h3>
+          <p><strong>Details</strong> These rooms offer comfort and traditional styling and include:
+
+            Single, Double or Twin beds
+            Ensuite bathroom
+            Complimentary toiletries
+            Tea & coffee making facilities
+            24 hour room service
+            Complimentary Wi-Fi
+            A selection of the Standard double rooms feature stunning sea views
+            Standard rooms are available as a Single, Twin, Double or Double with Sea View. Please select your preference while making your booking.</p>
+            <a class="btn btn-primary" href="{% url 'room-list' %}">Book Here</a>
+        </div>
+      </div><br><br><br>
+      <div class="col-12 col-md-6 order-0 order-md-1">
+        <div class="vh-100 cover" style="background-image: url(https://www.theimperialtorquay.co.uk/uploads/RoomImage/p1arljhogm3v1him1p0b19h31uca4-2.jpg);"></div>
+      </div>
+      <div class="col-12 col-md-6 order-2">
+        <div class="vh-100 cover" style="background-image: url(https://www.theimperialtorquay.co.uk/uploads/RoomImage/p1aunati941lc9iqcn8ap71b24-26.jpg);"></div>
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center order-3">
+        <div class="p-15">
+          <h3>Deluxe</h3>
+          <p><strong>Details</strong> These rooms allow you plenty of space to relax and unwind and include:
+
+            Double, King size or Twin beds
+            Balcony or terrace
+            Ensuite bathroom
+            Complimentary toiletries
+            Tea & coffee making facilities
+            24 hour room service
+            Complimentary Wi-Fi
+            Deluxe double rooms feature stunning sea views
+            Deluxe rooms are available as a Double with Sea View, King or Family. Please select your preference while making your booking.</p>
+            <a class="btn btn-primary" href="{% url 'room-list' %}">Book Here</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center order-3 order-md-4">
+        <div class="p-15">
+          <h3>Suite</h3>
+          <p><strong>Details</strong> These spacious suites are unique and designed with individual character. Each suite includes:
+
+            Double, King or Four Poster beds
+            Stunning sea views
+            Separate lounge area
+            Ensuite bathroom
+            Complimentary toiletries
+            Tea & coffee making facilities
+            24 hour room service
+            Complimentary Wi-Fi
+            Please note that these rooms do not have balcony access.
+            
+            Suites are available as a One Bedroom or Master Two Bedroom Suites. Please select your preference while making your booking.</p>
+            <a class="btn btn-primary" href="{% url 'room-list' %}">Book Here</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 order-0 order-md-1">
+        <div class="vh-100 cover" style="background-image: url(https://www.theimperialtorquay.co.uk/uploads/RoomImage/p1attanicaiqgj4g0j1jiob6je-23.jpg);"></div>
+      </div>
+    </div>
+  </section>
+
+<!-- <div class="container">
+  <form action="" method="POST">
+    {% csrf_token %}
+
+   {{ form.as_p}} 
+
+   <button type="submit">Book Room</button>
+</form>
+</div> -->
+  </html>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br><br><br><br>
+<div id="login-wrapper">
+    <div id="login-box">
+        <h1>Log In</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <!-- All this can be replaced with {{form.as_p}} -->
+            <label>Username</label>
+            <input type="text" name="username" class="form-control">
+            <label>Password</label>
+            <input type="password" name="password" class="form-control">
+            <br>
+            <p>
+                <button class="form-control btn btn-success">Login</button>
+            </p>
+            <p>
+                <h2>Don't have an Account?</h2>
+                <a class="btn btn-primary" href="{% url 'signup' %}">Signup Here!</a>
+            </p>
+            <!-- <p>
+                <h2>A Different Registration?</h2>
+                <a class="btn btn-success" href="{% url 'register' %}">Register Here!</a>
+            </p> -->
+        </form>
+    </div>
+</div>
+
+{% endblock %}

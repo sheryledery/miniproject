@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Room Detail</title>
+        <script src="https://kit.fontawesome.com/f60a6d466b.js" crossorigin="anonymous"></script>
+        <link ref="stylesheet" href="detail.css">
+    </head>
+
+    <body>
+        <div class="content">
+            <!-- Image -->
+            <div class = "Image">
+                <img
+                    src="https://www.theimperialtorquay.co.uk/uploads/GalleryImage/p1au52tbs219dk12vf1648fvmup820-61.jpg">
+            </div>
+
+            <div class="room">
+
+                <!-- Div 1 : Back to home -->
+                <div class="home">
+                    <a href="homepage.html"><i class="fas fa-arrow-alt-circle-left">Home</i></a>
+                </div>
+
+                <!-- Div 2 : Room informations -->
+                <div class ="room-info">
+                    <h1>{{room_category}}</h1>
+                    <p>
+                        Check-in/out
+Check-in after 3:00pm and check-out before 11:00am.
+
+Breakfast
+Breakfast is served in the restaurant Monday - Friday 7.30am - 10.00am and Saturday - Sunday 8.00am - 10.30am with the option of a cooked-to-order breakfast and continental. Download the Breakfast Menu
+
+Children
+Children of all ages are welcome to stay at The Imperial Torquay and infants (aged 0 - 2) stay for free. Children (aged 3 - 16) will be on the same rate (e.g. bed & breakfast) as the adults on their reservation.
+
+Children (aged 3 - 16) are charged:
+
+£20 per child, per night for a room only and room & breakfast rate
+£35 per child, per night for a dinner, room & breakfast rate
+Dogs
+We only accept dogs in our Garden Deluxe Rooms at an additional cost of £10 per dog per night.
+
+Parking
+If you are travelling by car, the hotel has a private car park on-site charged at £7 per car, per night. Alternatively we do offer a secure garage charged at £15 per car, per night which has a limited number of spaces available.
+Car valeting is available on-site from £10, please speak with our reception team for full details.
+
+Cancelling your stay
+Standard Rates: fully flexible with free cancellation up to 4pm the day before arrival. After this the first night’s stay will be charged. No deposit needed, simply provide a credit/debit card to secure your reservation with a pre-authorisation taken on check-in.
+
+Advance Purchase Rates: pre-payment to secure our best rates at the time of booking. Payment is non-refundable and non-transferable. With this in mind, it may be advisable to take out holiday insurance.
+                    </p>
+
+
+                    <!-- Div 3 : Room booking form -->
+                    <form id="booking-form" action="" method="POST">
+                        {% csrf_token %}
+
+                        <!-- Input Div -->
+                        <div class="input-div">
+                            <label for="id_check_in">Check In : </label>
+                            <input type="datetime-local" id="id_check_in" name="check_in">
+                        </div>
+
+                        <div class="input-div">
+                            <label for="id_check_out">Check Out : </label>
+                            <input type="datetime-local" id="id_check_out" name="check_out">
+                        </div>
+
+                        <div class="input-div">
+                            <button type="submit">Book the Room</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock %}

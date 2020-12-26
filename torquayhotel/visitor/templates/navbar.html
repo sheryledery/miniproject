@@ -1,0 +1,77 @@
+
+ <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+ </head>
+<body data-spy="scroll" data-target="#navbar" data-offset="72" class="position-relative">
+    <header class="fixed-top page-header">
+      <div class="container-fluid container-fluid-max">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark" >
+          <a class="navbar-brand text-dark" href="{% url 'homepage' %}"><b>Home</b></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-lg-between" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="{% url 'gallery' %}"><b>Gallery</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="{% url 'moreinfo' %}"><b>More Info</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="{% url 'review' %}"><b>Rate</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="{% url 'request' %}"><b>Request</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="{% url 'bookinglist' %}"><b>Book</b></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <b>Registration</b>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="{% url 'register' %}">Sign Up</S></a></li>
+                  <li><a class="dropdown-item" href="{% url 'login' %}">Log In</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li> {% if user.is_authenticated %}
+                    <span>
+                      <a class="dropdown-item" href="{% url 'logout' %}">Log Out</a></li>
+                    </span>
+                    {% endif %}
+                </ul>
+              </li>
+            </ul>
+            <div class="text-blue">
+                <a href="tel:0567858538" class="mr-2">
+                  <i class="fas fa-phone"></i>
+                  <div class="d-none d-xl-inline" style="color:black">0567858538  </div>
+                </a>
+                <a href="mailto:info@torquayhotel.com">
+                  <i class="fas fa-envelope"></i>
+                  <div class="d-none d-xl-inline" style="color:black">info@torquayhotel.com</div>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+      <!-- <main>
+         <section id="home" class="d-flex align-items-center position-relative vh-100 cover hero" style="background-image:url(jhttps://www.google.com/search?q=torquay+hotel&sxsrf=ALeKk02Xsnyt-OJc-WAfdyDipCz5dHGJ4g:1608194109823&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiW8JT1zdTtAhXNQxUIHQk1AZcQ_AUoAnoECAIQBA&biw=737&bih=743#imgrc=UwK6Zg5bZZeDqM);">
+        <div class="container-fluid container-fluid-max">
+          <div class="row">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <h1 class="text-white">Live an unforgettable experience in Torquay Hotel !</h1>
+              <div class="mt-3">
+                <a class="btn bg-red text-white mr-2" href="" role="button">Book Now</a>
+                <a class="btn bg-red text-white" href="" role="button">See avaibilities </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </main> -->
+    </body>

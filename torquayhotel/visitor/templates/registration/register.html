@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br><br><br><br>
+<h1>Register</h1>
+<form method="post">
+    {% csrf_token %}
+    <p>
+        Username
+        <input class="form-control" type="text" name="username" />
+    </p>
+    <p>
+        Password
+        <input class="form-control" type="password" name="password1" />
+    </p>
+    <p>
+        Confirm Password
+        <input class="form-control" type="password" name="password2" />
+    </p>
+    <p>
+        Link to Profile Picture
+        <input class="form-control" type="text" name="picture" />
+    </p>
+    <p>
+        Nickname
+        <input class="form-control" type="text" name="nickname" />
+    </p>
+    <!-- {{ form }} -->
+    <button class="btn btn-danger">Register</button>
+</form>
+
+{% endblock %}
